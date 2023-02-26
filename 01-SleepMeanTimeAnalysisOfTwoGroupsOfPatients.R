@@ -128,8 +128,7 @@ resultado_teste_t
 
 #There is no significant difference between the drugs applied to treat sleep disorders.
 
-#This kind of analysis is fascinating. The decision-makers can now determine if 
-#the pharmaceutical company has to introduce a new drug to the market or not.
+#This kind of analysis is fascinating. The decision-makers can now determine if the pharmaceutical company has to introduce a new drug to the market or not.
 
 
 
