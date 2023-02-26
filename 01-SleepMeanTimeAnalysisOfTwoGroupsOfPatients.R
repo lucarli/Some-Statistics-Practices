@@ -45,14 +45,14 @@ library(dplyr)
 #Test; for assumption 5, I will use the F-Test.
 
 #Let's separate the data from the two groups.
-grupo_dois <- sleep$group == 2
+grupo_two <- sleep$group == 2
 
 #-------------------------------------------------------------------------------
 
 #A first step may be to validate assumption 4 using qqPlot.
 ?qqPlot
-qqPlot(sleep$extra[grupo_dois])
-qqPlot(sleep$extra[! grupo_dois])
+qqPlot(sleep$extra[grupo_two])
+qqPlot(sleep$extra[! grupo_two])
 
 #Analysis: The data points for the "extra" variable are within the confidence 
 #area, indicating that the data follow a normal distribution.
@@ -74,8 +74,8 @@ qqPlot(sleep$extra[! grupo_dois])
 #The p-value must be greater than 0.05 to affirm a normal distribution.
 
 ?shapiro.test
-shapiro.test(sleep$extra[grupo_dois]) # p-value = 0.3511 > 0.05 
-shapiro.test(sleep$extra[! grupo_dois]) # p-value = 0.4079 > 0.05
+shapiro.test(sleep$extra[grupo_two]) # p-value = 0.3511 > 0.05 
+shapiro.test(sleep$extra[! grupo_two]) # p-value = 0.4079 > 0.05
 
 #The test p-value of each group is greater than 0.05, so we fail to reject H0. 
 #One can assume that the data is normally distributed.
@@ -102,8 +102,8 @@ sleep %>% group_by(group) %>%
 #H1: The means of data extracted from a normally distributed population do not have the same variance.
 
 ?var.test
-resultado_teste_f <- var.test(extra ~ group, data = sleep)
-resultado_teste_f 
+teste_f_result <- var.test(extra ~ group, data = sleep)
+teste_f_result 
 
 #The p-value is 0.7427, so greater than 0.05. We failed to reject H0. There is 
 #no significant difference between the variances of the 2 groups.
@@ -118,8 +118,8 @@ resultado_teste_f
 #H1: There is significant sleep time difference between the two groups? 
 
 ?t.test
-resultado_teste_t <- t.test(extra ~ group, data = sleep, var.equal = TRUE)
-resultado_teste_t 
+teste_t_result <- t.test(extra ~ group, data = sleep, var.equal = TRUE)
+teste_t_result 
 
 #Final analysis:
 
