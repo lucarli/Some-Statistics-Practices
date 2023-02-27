@@ -1,6 +1,17 @@
 #Luciano Carli Moreira de Andrade
 
-#ANOVA (Analysis of Variance)
+#Consider the following scenario:
+
+#One pharmaceutical company wants to compare the effects of three different medicine on patients.
+
+#This way, the company selected three patient groups and gave three distinct medicines (A, B, and C), one for each of the three groups.
+
+#The objective here is to answer to the following question:
+
+#Are there significant differences in the three medicine effects among the three groups? 
+#In other words, is there a significant difference between the three drugs in treating disease?
+
+#One can use the #ANOVA (Analysis of Variance) for this task.  
 
 #to use the ANOVA-test one can consider the following assumptions:
 
@@ -71,6 +82,6 @@ teste_anova <-  aov(nota_voluntario ~ medicamento, data = df)
 summary(teste_anova)
 
 #Conclusions: The p-value is 0.000256, i.e., p-value < 0.05. 
-#Therefore, one can reject H0. 
+#Therefore, one can reject H0 (null hypotheses). 
 #There is a significant difference among the groups, i.e., the three medicines groups have different effects.
 
