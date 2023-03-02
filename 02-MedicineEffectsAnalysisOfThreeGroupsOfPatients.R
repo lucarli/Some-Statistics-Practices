@@ -74,8 +74,8 @@ res
 
 #One can perform the third hypothesis test as follows:
 
-#H0: There is no significant difference among the groups? 
-#H1: There is significant difference among the groups?
+#H0: There is no significant difference among the groups.
+#H1: There is significant difference among the groups.
 
 ?aov
 teste_anova <-  aov(nota_voluntario ~ medicamento, data = df)
