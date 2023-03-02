@@ -114,8 +114,8 @@ teste_f_result
 
 #One can perform the third hypothesis test as follows:
 
-#H0: There is no significant sleep time difference between the two groups? 
-#H1: There is significant sleep time difference between the two groups? 
+#H0: There is no significant sleep time difference between the two groups.
+#H1: There is significant sleep time difference between the two groups.
 
 ?t.test
 teste_t_result <- t.test(extra ~ group, data = sleep, var.equal = TRUE)
